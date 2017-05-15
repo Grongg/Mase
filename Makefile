@@ -5,31 +5,31 @@
 ## Login   <lionel.de-sousa@epitech.eu>
 ## 
 ## Started on  Wed May  3 15:40:46 2017 Lionell
-## Last update Wed May  3 21:09:42 2017 Lionell
+## Last update Mon May 15 17:33:59 2017 Lionell
 ##
 
-DEBUG	=	yes
+DEBUG	=	no
 
 CC	=	gcc
 
-NAME	=	depth	\
-		generator	\
-		astar	\
-		breadth	\
-		tournement	\
-		mazes
+NAME	=	depth/solver	\
+		breadth/solver	\
+		astar/solver	\
+		tounament/solver	\
+		mazes/generator	\
+		generator/generator
 
-NAME1	=	depth
+NAME1	=	./depth/solver
 
-NAME2   =	generator
+NAME2   =	./generator/generator
 
-NAME3	=	astar
+NAME3	=	./astar/solver
 
-NAME4	=	breadth
+NAME4	=	./breadth/solver
 
-NAME5	=	tournement
+NAME5	=	./tournament/solver
 
-NAME6	=	mazes
+NAME6	=	./mazes/generator
 
 ifeq ($(DEBUG),yes)
 
@@ -48,65 +48,63 @@ CFLAGS += -Werror
 
 endif
 
-CPPFLAGS =	-Icreate/include -Isolver/include
+CPPFLAGS =	-Igenerator/include -Idepth/include
 
-#SRC doit contenir tout je dis bien tout les .c et les autres .c mis dans les src1, src2, etc ... sont juste pour te montrer que cela fonctionne voila voila
+SRC	=	generator/src/laby.c	\
+		generator/src/map.c	\
+		generator/src/main.c	\
+		generator/src/map_info.c	\
+		generator/src/main_path.c	\
+		generator/src/secondary_path.c	\
+		depth/src/depth.c	\
+		depth/src/main.c	\
+		depth/src/read_file.c	\
+		depth/src/my_str_to_word_tab.c
 
-SRC	=	create/src/laby.c	\
-		create/src/map.c	\
-		create/src/main.c	\
-		create/src/map_info.c	\
-		create/src/main_path.c	\
-		create/src/secondary_path.c	\
-		solver/src/depth.c	\
-		solver/src/main.c	\
-		solver/src/read_file.c	\
-		solver/src/my_str_to_word_tab.c
+SRC1	=	generator/src/laby.c    \
+                generator/src/map.c     \
+                generator/src/map_info.c        \
+                generator/src/main_path.c       \
+                generator/src/secondary_path.c  \
+		depth/src/depth.c	\
+		depth/src/main.c	\
+		depth/src/read_file.c	\
+		depth/src/my_str_to_word_tab.c
 
-SRC1	=	create/src/laby.c	\
-		create/src/map.c	\
-		create/src/map_info.c	\
-		create/src/main_path.c	\
-		create/src/secondary_path.c	\
-		solver/src/depth.c	\
-		solver/src/main.c	\
-		solver/src/read_file.c	\
-		solver/src/my_str_to_word_tab.c
+SRC2	=	generator/src/laby.c    \
+                generator/src/map.c     \
+                generator/src/main.c    \
+                generator/src/map_info.c        \
+                generator/src/main_path.c       \
+                generator/src/secondary_path.c  \
 
-SRC2	=	create/src/laby.c	\
-		create/src/map.c	\
-		create/src/main.c	\
-		create/src/map_info.c	\
-		create/src/main_path.c	\
-		create/src/secondary_path.c
+SRC3	=	generator/src/laby.c    \
+                generator/src/map.c     \
+                generator/src/main.c    \
+                generator/src/map_info.c        \
+                generator/src/main_path.c       \
+                generator/src/secondary_path.c  \
 
-SRC3	=	create/src/laby.c	\
-		create/src/map.c	\
-		create/src/main.c	\
-		create/src/map_info.c	\
-		create/src/main_path.c	\
-		create/src/secondary_path.c
+SRC4   	=	generator/src/laby.c    \
+                generator/src/map.c     \
+                generator/src/main.c    \
+                generator/src/map_info.c        \
+                generator/src/main_path.c       \
+                generator/src/secondary_path.c  \
 
-SRC4   	=	create/src/laby.c	\
-		create/src/map.c	\
-		create/src/main.c	\
-		create/src/map_info.c	\
-		create/src/main_path.c	\
-		create/src/secondary_path.c
+SRC5    =	generator/src/laby.c    \
+                generator/src/map.c     \
+                generator/src/main.c    \
+                generator/src/map_info.c        \
+                generator/src/main_path.c       \
+                generator/src/secondary_path.c  \
 
-SRC5    =	create/src/laby.c	\
-		create/src/map.c	\
-		create/src/main.c	\
-		create/src/map_info.c	\
-		create/src/main_path.c	\
-		create/src/secondary_path.c
-
-SRC6    =	create/src/laby.c	\
-		create/src/map.c	\
-		create/src/main.c	\
-		create/src/map_info.c	\
-		create/src/main_path.c	\
-		create/src/secondary_path.c
+SRC6    =	generator/src/laby.c    \
+                generator/src/map.c     \
+                generator/src/main.c    \
+                generator/src/map_info.c        \
+                generator/src/main_path.c       \
+                generator/src/secondary_path.c  \
 
 OBJS	=	$(SRC:.c=.o)
 
