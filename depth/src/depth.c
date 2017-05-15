@@ -5,7 +5,7 @@
 ** Login   <lionel.de-sousa@epitech.eu>
 ** 
 ** Started on  Wed May  3 17:53:06 2017 Lionell
-** Last update Mon May 15 18:48:28 2017 Lionell
+** Last update Mon May 15 19:35:01 2017 Lionell
 */
 
 #include "solver.h"
